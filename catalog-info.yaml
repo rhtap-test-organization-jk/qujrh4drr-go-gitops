@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qujrh4drr-go-gitops
+  description: This is GitOps manifest for qujrh4drr-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qujrh4drr-go
+    backstage.io/kubernetes-id: qujrh4drr-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: qujrh4drr-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qujrh4drr-go
